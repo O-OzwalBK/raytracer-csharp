@@ -1,0 +1,14 @@
+d:\Projects\Csharp\raytracer\bin\Debug\net9.0\raytracer.exe
+D:\Projects\Csharp\raytracer\bin\Debug\net9.0\raytracer.deps.json
+D:\Projects\Csharp\raytracer\bin\Debug\net9.0\raytracer.runtimeconfig.json
+d:\Projects\Csharp\raytracer\bin\Debug\net9.0\raytracer.dll
+d:\Projects\Csharp\raytracer\bin\Debug\net9.0\raytracer.pdb
+d:\Projects\Csharp\raytracer\obj\Debug\net9.0\raytracer.GeneratedMSBuildEditorConfig.editorconfig
+d:\Projects\Csharp\raytracer\obj\Debug\net9.0\raytracer.AssemblyInfoInputs.cache
+d:\Projects\Csharp\raytracer\obj\Debug\net9.0\raytracer.AssemblyInfo.cs
+d:\Projects\Csharp\raytracer\obj\Debug\net9.0\raytracer.csproj.CoreCompileInputs.cache
+d:\Projects\Csharp\raytracer\obj\Debug\net9.0\raytracer.dll
+d:\Projects\Csharp\raytracer\obj\Debug\net9.0\refint\raytracer.dll
+d:\Projects\Csharp\raytracer\obj\Debug\net9.0\raytracer.pdb
+D:\Projects\Csharp\raytracer\obj\Debug\net9.0\raytracer.genruntimeconfig.cache
+D:\Projects\Csharp\raytracer\obj\Debug\net9.0\ref\raytracer.dll
