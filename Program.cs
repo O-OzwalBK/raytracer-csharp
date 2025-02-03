@@ -25,6 +25,8 @@ internal class Program
                 // for pixel color values
                 for (int row = 0; row < imageHeight; row++)
                 {
+                    Console.Error.Write($"\rScanlines remaining: {imageHeight - row} ");
+                    Console.Error.Flush();
                     for (int column = 0; column < imageWidth; column++)
                     {
                         double red = (double)column / (imageWidth - 1);
@@ -38,6 +40,9 @@ internal class Program
                         imageFile.WriteLine($"{intRed} {intGreen} {intBlue}");
                     }
                 }
+                Console.Error.Write("\nFinished Rendering.");
+                Console.Error.Flush();
+
             }
         }
         catch (Exception)
