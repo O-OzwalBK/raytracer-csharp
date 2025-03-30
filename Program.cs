@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using Raytracer;
 internal class Program
 {
     static readonly int imageHeight = 512;
@@ -42,12 +41,11 @@ internal class Program
                 }
                 Console.Error.Write("\nFinished Rendering.");
                 Console.Error.Flush();
-
+                Vector3 position = new();
             }
         }
         catch (Exception)
         {
-
             throw;
         }
     }
