@@ -12,3 +12,4 @@ d:\Projects\Csharp\raytracer\obj\Debug\net9.0\refint\raytracer.dll
 d:\Projects\Csharp\raytracer\obj\Debug\net9.0\raytracer.pdb
 D:\Projects\Csharp\raytracer\obj\Debug\net9.0\raytracer.genruntimeconfig.cache
 D:\Projects\Csharp\raytracer\obj\Debug\net9.0\ref\raytracer.dll
+D:\Projects\Csharp\raytracer\obj\Debug\net9.0\raytracer.sourcelink.json

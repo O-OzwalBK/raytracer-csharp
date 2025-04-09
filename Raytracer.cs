@@ -1,5 +1,6 @@
-﻿using Raytracer;
-internal class Program
+﻿using MathLogic;
+using static ClassAliases.Aliases;
+internal class Raytracer
 {
     static readonly int imageHeight = 512;
     static readonly int imageWidth = 512;
@@ -28,15 +29,18 @@ internal class Program
                     Console.Error.Flush();
                     for (int column = 0; column < imageWidth; column++)
                     {
-                        double red = (double)column / (imageWidth - 1);
-                        double green = (double)row / (imageHeight - 1);
-                        double blue = 0.0;
+                        // double red = (double)column / (imageWidth - 1);
+                        // double green = (double)row / (imageHeight - 1);
+                        // double blue = 0.0;
 
-                        int intRed = (int)(255.999 * red);
-                        int intGreen = (int)(255.999 * green);
-                        int intBlue = (int)(255.999 * blue);
+                        // int intRed = (int)(255.999 * red);
+                        // int intGreen = (int)(255.999 * green);
+                        // int intBlue = (int)(255.999 * blue);
 
-                        imageFile.WriteLine($"{intRed} {intGreen} {intBlue}");
+                        // imageFile.WriteLine($"{intRed} {intGreen} {intBlue}");
+
+                        var pixelColor = Color((double)column / (imageWidth - 1), (double)row / (imageHeight - 1), 0);
+                        HandleColor.WriteColor(imageFile, pixelColor);
                     }
                 }
                 Console.Error.Write("\nFinished Rendering.");

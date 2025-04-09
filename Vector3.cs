@@ -1,6 +1,6 @@
-namespace Raytracer
+namespace MathLogic
 {
-    class Vector3
+    public class Vector3
     {
         public double[] coordinate = new double[3];
 
@@ -23,7 +23,6 @@ namespace Raytracer
         public double Z => coordinate[2];
 
         // Indexer for accessing elements by index
-        public double this[int i] => coordinate[i];
         public double this[int i]
         {
             get { return coordinate[i]; }
@@ -37,16 +36,16 @@ namespace Raytracer
         }
 
         // Addition assignment operator
-        public static Vector3 operator +=(Vector3 vector1, Vector3 vector2)
+        public static Vector3 operator +(Vector3 vector1, Vector3 vector2)
         {
-            coordinate[0] += vector2.coordinate[0];
-            coordinate[1] += vector2.coordinate[1];
-            coordinate[2] += vector2.coordinate[2];
-            return this;
+            vector1.coordinate[0] += vector2.coordinate[0];
+            vector1.coordinate[1] += vector2.coordinate[1];
+            vector1.coordinate[2] += vector2.coordinate[2];
+            return vector1;
         }
 
         // Scalar multiplication assignment operator
-        public static Vector3 operator *=(Vector3 vector, double multiplier)
+        public static Vector3 operator *(Vector3 vector, double multiplier)
         {
             vector.coordinate[0] *= multiplier;
             vector.coordinate[1] *= multiplier;
@@ -55,15 +54,21 @@ namespace Raytracer
         }
 
         // Scalar division assignment operator
-        public static Vector3 operator /=(Vector3 vector, double divisor)
+        public static Vector3 operator /(Vector3 vector, double divisor)
         {
             return vector *= 1 / divisor;
         }
 
-        // Method to calculate length (magnitude) of the vector
-        public double Magnitude()
+        // Useful when only comparison needs to be between two vectors
+        public double MagnitudeSquared(Vector3 vector)
         {
-            return Math.Sqrt(LengthSquared());
+            return DotProduct(vector, vector);
+        }
+
+        // Method to calculate length (magnitude) of the vector
+        public double Magnitude(Vector3 vector)
+        {
+            return Math.Sqrt(MagnitudeSquared(vector));
         }
 
         // Dot Product
@@ -75,16 +80,16 @@ namespace Raytracer
         // Cross Product
         public static Vector3 CrossProduct(Vector3 vector1, Vector3 vector2)
         {
-            return Vector3(
+            return new Vector3(
                 vector1.coordinate[1] * vector2.coordinate[2] - vector1.coordinate[2] * vector2.coordinate[1],
                 vector1.coordinate[2] * vector2.coordinate[0] - vector1.coordinate[0] * vector2.coordinate[2],
                 vector1.coordinate[0] * vector2.coordinate[1] - vector1.coordinate[1] * vector2.coordinate[0]
-            )
+            );
         }
 
-        public static Vector3 UnitVector()
-        {
-            // pass the maginitude of the vector to the divisior
-        }
+        // public static Vector3 UnitVector(Vector3 vector)
+        // {
+        // // Pass the maginitude of the vector to the divisior
+        // }
     }
 }
