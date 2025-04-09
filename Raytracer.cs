@@ -2,8 +2,8 @@
 using static ClassAliases.Aliases;
 internal class Raytracer
 {
-    static readonly int imageHeight = 512;
-    static readonly int imageWidth = 512;
+    static readonly int imageHeight = 256;
+    static readonly int imageWidth = 256;
 
     static readonly string filePath = "../raytracer/OutputImage";
     private static void Main()
