@@ -5,7 +5,7 @@ internal class Raytracer
     static readonly int imageHeight = 512;
     static readonly int imageWidth = 512;
 
-    static readonly string filePath = "../raytracer/obj/";
+    static readonly string filePath = "../raytracer/OutputImage";
     private static void Main()
     {
         WriteToFile("RaytracedImageOutput.ppm");
@@ -48,8 +48,9 @@ internal class Raytracer
                 Vector3 position = new();
             }
         }
-        catch (Exception)
+        catch (Exception error)
         {
+            Console.Error.WriteLine($"Error writing to file: {error.Message}");
             throw;
         }
     }
