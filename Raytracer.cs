@@ -29,25 +29,19 @@ internal class Raytracer
                     Console.Error.Flush();
                     for (int column = 0; column < imageWidth; column++)
                     {
-                        // double red = (double)column / (imageWidth - 1);
-                        // double green = (double)row / (imageHeight - 1);
-                        // double blue = 0.0;
+                        double red = (double)column / (imageWidth - 1);
+                        double green = (double)row / (imageHeight - 1);
+                        double blue = 0.0;
 
-                        // int intRed = (int)(255.999 * red);
-                        // int intGreen = (int)(255.999 * green);
-                        // int intBlue = (int)(255.999 * blue);
-
-                        // imageFile.WriteLine($"{intRed} {intGreen} {intBlue}");
-
-                        var pixelColor = Color((double)column / (imageWidth - 1), (double)row / (imageHeight - 1), 0);
+                        var pixelColor = Color(red, green, blue);
                         HandleColor.WriteColor(imageFile, pixelColor);
                     }
                 }
                 Console.Error.Write("\nFinished Rendering.");
                 Console.Error.Flush();
-                Vector3 position = new();
             }
         }
+
         catch (Exception error)
         {
             Console.Error.WriteLine($"Error writing to file: {error.Message}");
