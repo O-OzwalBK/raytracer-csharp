@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "GES03dXD7YM=",
+  "dgSpecHash": "f8pucv4jwM4=",
   "success": true,
   "projectFilePath": "D:\\Projects\\Csharp\\raytracer\\raytracer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Oozwal\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.4\\microsoft.win32.systemevents.9.0.4.nupkg.sha512",
+    "C:\\Users\\Oozwal\\.nuget\\packages\\system.drawing.common\\9.0.4\\system.drawing.common.9.0.4.nupkg.sha512"
+  ],
   "logs": []
 }
