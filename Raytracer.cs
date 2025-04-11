@@ -1,4 +1,4 @@
-﻿using MathLogic;
+﻿using System.Runtime.InteropServices;
 using static ClassAliases.Aliases;
 internal class Raytracer
 {
@@ -40,6 +40,13 @@ internal class Raytracer
                 Console.Error.Write("\nFinished Rendering.");
                 Console.Error.Flush();
             }
+            if (OperatingSystem.IsOSPlatform("Windows"))
+            {
+                PpmConverter.ConvertPpmToPng("./OutputImage/RaytracedImageOutput.ppm", "../OutputImage/");
+            }
+            else
+                Console.WriteLine("Ppm to PNG conversion is only supported on Windows.");
+
         }
 
         catch (Exception error)
