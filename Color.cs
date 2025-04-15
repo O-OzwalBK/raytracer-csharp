@@ -1,6 +1,6 @@
 using MathLogic;
 
-public static class HandleColor
+public static class Color
 {
     public static void WriteColor(StreamWriter outStream, Vector3 pixelColor)
     {

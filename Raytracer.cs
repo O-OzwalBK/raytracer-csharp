@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using static ClassAliases.Aliases;
+﻿using static ClassAliases.Aliases;
 internal class Raytracer
 {
     static readonly int imageHeight = 256;
@@ -34,7 +33,7 @@ internal class Raytracer
                         double blue = 0.0;
 
                         var pixelColor = Color(red, green, blue);
-                        HandleColor.WriteColor(imageFile, pixelColor);
+                        Color.WriteColor(imageFile, pixelColor);
                     }
                 }
                 Console.Error.Write("\nFinished Rendering.");
@@ -42,7 +41,7 @@ internal class Raytracer
             }
             if (OperatingSystem.IsOSPlatform("Windows"))
             {
-                PpmConverter.ConvertPpmToPng("./OutputImage/RaytracedImageOutput.ppm", "../OutputImage/");
+                PpmConverter.ConvertPpmToPng("./OutputImage/RaytracedImageOutput.ppm", "./OutputImage/RaytracedImageOutput.png");
             }
             else
                 Console.WriteLine("Ppm to PNG conversion is only supported on Windows.");
