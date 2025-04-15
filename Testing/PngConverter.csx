@@ -34,6 +34,7 @@ static void ConvertPpmToPng(string inputImagePath, string outputImagePath)
 
             string[] colorValue = imageResolution.Split();
             Console.WriteLine($"Image width: {colorValue[0]}\nImage height: {colorValue[1]}");
+            Console.WriteLine(string.Join(',', colorValue));
 
             string? maxColor = ppmImage.ReadLine();
             if (!string.IsNullOrWhiteSpace(maxColor))
@@ -43,7 +44,6 @@ static void ConvertPpmToPng(string inputImagePath, string outputImagePath)
                 Console.WriteLine($"Max color value is: {maxColorValue}");
 
             }
-
         }
     }
     catch (DirectoryNotFoundException noDirectory)
